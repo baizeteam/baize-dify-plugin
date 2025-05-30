@@ -1,12 +1,12 @@
-model: openai/gpt-4.1-nano
+model: openai/o3
 label:
-  en_US: openai/gpt-4.1-nano
+  en_US: openai/o3
 model_type: llm
 features:
   - agent-thought
 model_properties:
   mode: chat
-  context_size: 1049000
+  context_size: 200000
 parameter_rules:
   - name: temperature
     use_template: temperature
@@ -37,4 +37,4 @@ pricing:
   output: "0"
   unit: "0.000001"
   currency: RMB
-deprecated: false
+deprecated: true

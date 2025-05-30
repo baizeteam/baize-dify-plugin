@@ -6,13 +6,14 @@ extra:
   python:
     model_sources:
       - models/llm/llm.py
+      - models/text_embedding/text_embedding.py
     provider_source: provider/index.py
 help:
   title:
     en_US: Get your API Key from github
     zh_Hans: 从 github 获取 API Key
   url:
-    en_US: https://cloud.github.cn/account/ak
+    en_US: https://github.com/marketplace?type=models
 icon_large:
   en_US: github.svg
 icon_small:
@@ -79,6 +80,9 @@ models:
     position: models/llm/_position.yaml
     predefined:
       - models/llm/*.yaml
+  text_embedding:
+    predefined:
+      - models/text_embedding/*.yaml
 provider: github
 provider_credential_schema:
   credential_form_schemas:
@@ -101,3 +105,4 @@ provider_credential_schema:
       variable: proxy_url
 supported_model_types:
   - llm
+  - text-embedding
