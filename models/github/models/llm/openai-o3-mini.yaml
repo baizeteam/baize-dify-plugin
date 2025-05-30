@@ -1,6 +1,6 @@
-model: openai/o3
+model: openai/o3-mini
 label:
-  en_US: openai/o3
+  en_US: openai/o3-mini
 model_type: llm
 features:
   - agent-thought
