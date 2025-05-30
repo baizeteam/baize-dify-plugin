@@ -116,7 +116,7 @@ class SiliconFlowText2SpeechModel(_CommonOaiApiCompat, TTSModel):
 
     @classmethod
     def _add_custom_parameters(cls, credentials: dict) -> None:
-        credentials["openai_api_base"] = "https://api.siliconflow.cn"
+        credentials["openai_api_base"] = credentials.get("proxy_url", "https://api.siliconflow.cn/v1")
         credentials["openai_api_key"] = credentials["api_key"]
 
     def _to_credential_kwargs(self, credentials: Mapping) -> dict:
@@ -130,11 +130,8 @@ class SiliconFlowText2SpeechModel(_CommonOaiApiCompat, TTSModel):
             "api_key": credentials["openai_api_key"],
             "timeout": Timeout(315.0, read=300.0, write=10.0, connect=5.0),
             "max_retries": 1,
+            "base_url": credentials["openai_api_key"]
         }
-
-        if credentials.get("openai_api_base"):
-            openai_api_base = credentials["openai_api_base"].rstrip("/")
-            credentials_kwargs["base_url"] = openai_api_base + "/v1"
 
         if "openai_organization" in credentials:
             credentials_kwargs["organization"] = credentials["openai_organization"]

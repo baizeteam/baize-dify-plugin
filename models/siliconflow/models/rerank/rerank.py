@@ -26,7 +26,7 @@ class SiliconflowRerankModel(RerankModel):
     ) -> RerankResult:
         if len(docs) == 0:
             return RerankResult(model=model, docs=[])
-        base_url = credentials.get("base_url", "https://api.siliconflow.cn/v1")
+        base_url = credentials.get("proxy_url", "https://api.siliconflow.cn/v1")
         base_url = base_url.removesuffix("/")
         try:
             response = httpx.post(

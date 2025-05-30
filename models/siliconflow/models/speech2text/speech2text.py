@@ -26,4 +26,4 @@ class SiliconflowSpeech2TextModel(OAICompatSpeech2TextModel):
 
     @classmethod
     def _add_custom_parameters(cls, credentials: dict) -> None:
-        credentials["endpoint_url"] = "https://api.siliconflow.cn/v1"
+        credentials["endpoint_url"] = credentials.get("proxy_url", "https://api.siliconflow.cn/v1")
