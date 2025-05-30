@@ -39,7 +39,7 @@ class GithubLargeLanguageModel(OAICompatLargeLanguageModel):
     @classmethod
     def _add_custom_parameters(cls, credentials: dict) -> None:
         credentials["mode"] = "chat"
-        credentials["endpoint_url"] = "https://models.github.ai/inference"
+        credentials["endpoint_url"] = credentials.get("proxy_url", "https://models.github.ai/inference")
 
     def get_customizable_model_schema(
         self, model: str, credentials: dict
