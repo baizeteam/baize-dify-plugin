@@ -31,9 +31,11 @@ models:
     predefined:
       - models/llm/*.yaml
   speech2text:
-    position: models/speech2text/_position.yaml
     predefined:
       - models/speech2text/*.yaml
+  tts:
+    predefined:
+      - models/tts/*.yaml
 provider: groq
 provider_credential_schema:
   credential_form_schemas:
