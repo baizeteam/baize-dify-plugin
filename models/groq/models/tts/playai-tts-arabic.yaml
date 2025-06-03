@@ -1,0 +1,25 @@
+model: playai-tts-arabic
+model_type: tts
+model_properties:
+  default_voice: "Arista-PlayAI"
+  voices:
+    - mode: "Ahmad-PlayAI"
+      name: "Ahmad-PlayAI（男声）"
+      language: ["zh-Hans", "en-US"]
+    - mode: "Amira-PlayAI"
+      name: "Amira-PlayAI（女声）"
+      language: ["zh-Hans", "en-US"]
+    - mode: Khalid-PlayAI"
+      name: "Khalid-PlayAI（男声）"
+      language: ["zh-Hans", "en-US"]
+    - mode: "Nasser-PlayAI"
+      name: "Nasser-PlayAI（男声）"
+      language: ["zh-Hans", "en-US"]
+  audio_type: "mp3"
+  max_workers: 5
+  # stream: false
+pricing:
+  input: "50"
+  output: "0"
+  unit: "0.000001"
+  currency: RMB

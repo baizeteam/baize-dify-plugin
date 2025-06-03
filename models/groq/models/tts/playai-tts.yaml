@@ -1,0 +1,34 @@
+model: playai-tts
+model_type: tts
+model_properties:
+  default_voice: "Arista-PlayAI"
+  voices:
+    - mode: "Arista-PlayAI"
+      name: "Arista-PlayAI（女声）"
+      language: ["zh-Hans", "en-US"]
+    - mode: "Atlas-PlayAI"
+      name: "Atlas-PlayAI（男声）"
+      language: ["zh-Hans", "en-US"]
+    - mode: "Basil-PlayAI"
+      name: "Basil-PlayAI（男声）"
+      language: ["zh-Hans", "en-US"]
+    - mode: "Briggs-PlayAI"
+      name: "Briggs-PlayAI（男声）"
+      language: ["zh-Hans", "en-US"]
+    - mode: "Calum-PlayAI"
+      name: "Calum-PlayAI（男声）"
+      language: ["zh-Hans", "en-US"]
+    - mode: "Celeste-PlayAI"
+      name: "Celeste-PlayAI（女声）"
+      language: ["zh-Hans", "en-US"]
+    - mode: "Cheyenne-PlayAI"
+      name: "Cheyenne-PlayAI（女声）"
+      language: ["zh-Hans", "en-US"]
+  audio_type: "mp3"
+  max_workers: 5
+  # stream: false
+pricing:
+  input: "50"
+  output: "0"
+  unit: "0.000001"
+  currency: RMB
